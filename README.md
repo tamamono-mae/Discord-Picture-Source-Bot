@@ -1,2 +1,2 @@
-# Discord-Picture-Source-Bot
+# Discord-image-query-Bot
  
