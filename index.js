@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
-const config = require("./config.json");
-const req = require("./require.js");
+const config = require("../token/config.json");
+const req = require("./fetch-saucenao.js");
 const client = new Discord.Client();
 
 client.login(config.BOT_TOKEN);
