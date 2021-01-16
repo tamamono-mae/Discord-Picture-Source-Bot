@@ -13,6 +13,7 @@ client.on("message", function(message) {
   if (message.author.bot) return;
   if (!message.content.startsWith(config.prefix) && !is_dm) return;
   var msgbody = (is_dm) ? message.content : message.content.slice(config.prefix.length);
-  q.ascii2d(msgbody).then(result => {message.channel.send(result)});
-  
+  q.ascii2d(msgbody).then(result => {message.channel.send("ascii2d\n"+result)});
+  q.saucenao(msgbody).then(result => {message.channel.send("SauceNAO\n"+result)});
+
 });
