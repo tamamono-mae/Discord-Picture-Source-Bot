@@ -1,0 +1,21 @@
+{
+  "name": "imgbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.5",
+    "discord.js": "^12.5.1",
+    "fs": "^0.0.1-security",
+    "loader": "^2.1.1",
+    "node.js": "^0.0.1-security",
+    "node-fetch": "^2.6.1",
+    "promise": "^8.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
