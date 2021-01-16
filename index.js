@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const config = require("../token/config.json");
 const q = require("./query.js");
-//const ascii2d = require("./fetch-ascii2d.js");
 const client = new Discord.Client();
 
 client.login(config.BOT_TOKEN);
