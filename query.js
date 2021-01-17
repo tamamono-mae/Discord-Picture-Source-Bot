@@ -14,7 +14,7 @@ async function saucenao(url){
   .then(res => res.text());
   let $ = cheerio.load(body);
   return $("div[class='result']").length == 1 ?
-      null : $(".result .resulttable .resulttablecontent .resultcontentcolumn").find("a").eq(0).attr("href");
+      ":x: Low similarity" : $(".result .resulttable .resulttablecontent .resultcontentcolumn").find("a").eq(0).attr("href");
 
 }
 
@@ -24,9 +24,11 @@ async function ascii2d(url){
   .then(res => res.text());
   let $ = cheerio.load(body);
   var i = ($("div.detail-box.gray-link").eq(0).find("a").eq(0).attr("href") == null) ? 1 : 0;
-  if ($("div.detail-box.gray-link").eq(0+i).find("small").text() == "twitter") return $("div.detail-box.gray-link").eq(0+i).find("a").eq(0).attr("href");
-  else if ($("div.detail-box.gray-link").eq(1+i).find("small").text() == "twitter") return $("div.detail-box.gray-link").eq(1+i).find("a").eq(0).attr("href");
-  else return $("div.detail-box.gray-link").eq(0+i).find("a").eq(0).attr("href");
+  var r;
+  if ($("div.detail-box.gray-link").eq(0+i).find("small").text() == "twitter") r = $("div.detail-box.gray-link").eq(0+i).find("a").eq(0).attr("href");
+  else if ($("div.detail-box.gray-link").eq(1+i).find("small").text() == "twitter") r = $("div.detail-box.gray-link").eq(1+i).find("a").eq(0).attr("href");
+  else r = $("div.detail-box.gray-link").eq(0+i).find("a").eq(0).attr("href");
+  return (r == null) ? ":x: Error" : r ;
 
 }
 
