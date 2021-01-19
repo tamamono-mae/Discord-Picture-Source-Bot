@@ -4,9 +4,7 @@ const q = require("./query.js");
 const client = new Discord.Client();
 
 client.login(config.BOT_TOKEN);
-function return_message(){
 
-}
 client.on("message", function(message) {
   var is_dm = message.channel.type == 'dm';
   if (message.author.bot) return;
