@@ -13,6 +13,8 @@ async function saucenao(url){
   })
   .then(res => res.text());
   let $ = cheerio.load(body);
+  //console.log($("*").html());
+  console.log(parseFloat($(".result .resulttable .resulttablecontent .resultmatchinfo").eq(0).text().slice(0, -1)));
   return $("div[class='result']").length == 1 ?
       ":x: Low similarity" : $(".result .resulttable .resulttablecontent .resultcontentcolumn").find("a").eq(0).attr("href");
 
