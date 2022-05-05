@@ -109,4 +109,4 @@ config.json
 package-lock.json
 
 # Private script
-reminder.js
+remider.js
